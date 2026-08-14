@@ -1,86 +1,139 @@
 # febwebdev.github.io
 
-Personal portfolio for **Febe — Front-End WordPress Developer**.
+Personal portfolio website for **Febelyn — Front-End WordPress Developer**.
 
-## Before publishing
+🌐 **Live site:** [febwebdev.github.io](https://febwebdev.github.io/)
 
-There is one required edit:
+## About
 
-1. Open `index.html`.
-2. Find `ADD-YOUR-EMAIL-HERE`.
-3. Replace it with the email address you want employers/clients to use.
+This portfolio highlights my experience in front-end WordPress development, including design-to-WordPress implementation, responsive development, content-driven WordPress builds, troubleshooting, QA, and ongoing website maintenance.
 
-Example:
+My primary focus includes:
 
-```html
-data-email="hello@example.com"
-```
+- Figma → WordPress implementation
+- Gutenberg and Kadence
+- ACF / ACF Pro
+- Theme customization and child themes
+- Responsive front-end development
+- Gravity Forms
+- WooCommerce
+- WordPress troubleshooting and maintenance
+- Cross-browser and responsive QA
 
-## Optional edits
+## Selected Work
 
-### Change your displayed name
-Search for `Febe` in `index.html`.
+The portfolio includes examples of work such as:
 
-### Add a resume button
-A good place is inside `.hero-actions` near the "View selected work" button.
+### Agency Website Builds from Figma
+Responsive WordPress implementation from approved design files using Gutenberg, Kadence, ACF, and front-end development.
 
-Example:
+### Villa Booking Workflow
+A custom WordPress booking experience involving date availability, minimum-stay requirements, pricing logic, Gravity Forms, ACF, ICS data, and Litepicker.
 
-```html
-<a class="button button-secondary" href="assets/Febe-Resume.pdf" target="_blank">
-  View resume
-</a>
-```
+### Portfolio Content Rebuild
+Structured an existing WordPress portfolio using custom post types, taxonomies, ACF, shortcodes, and reusable display logic.
 
-Then place your PDF inside the `assets` folder.
+### Form Delivery & Anti-Spam Troubleshooting
+Investigated WordPress form-delivery issues through Gravity Forms entries, notification logs, SMTP configuration, and reCAPTCHA settings.
 
-### Replace project mockups with screenshots later
-The current portfolio intentionally uses CSS-built project mockups, so it works without any image files.
-When you have NDA-safe screenshots, you can replace each `.project-preview` block with an `<img>`.
+### WordPress Maintenance & Production Fixes
+Ongoing work involving responsive fixes, layout issues, content updates, forms, plugin troubleshooting, and QA across existing websites.
 
-### Update the project copy
-All project descriptions are in `index.html`. Keep them short and outcome-focused:
-- what the problem was
-- what you built/fixed
-- technologies used
-- result or benefit
+> Client names and identifying project details are intentionally omitted where appropriate.
 
-## Local preview
+## Skills & Tools
 
-You can double-click `index.html`, but for the most accurate local behavior it is better to use a tiny local server.
+### WordPress
+- Gutenberg
+- Kadence
+- Genesis
+- GeneratePress
+- Theme customization
+- Child themes
 
-If you have Python:
+### Page Builders
+- Elementor
+- Beaver Builder
+- Divi
+- Bricks
+- WPBakery
+- SiteOrigin
+- Avada
+
+### Front-End
+- HTML
+- CSS / SCSS
+- JavaScript
+- jQuery
+- Responsive development
+
+### Dynamic Content
+- ACF / ACF Pro
+- Custom Post Types
+- Taxonomies
+- Shortcodes
+
+### Forms & Integrations
+- Gravity Forms
+- WooCommerce
+- reCAPTCHA
+- SMTP troubleshooting
+
+### Workflow & QA
+- Figma
+- Chrome DevTools
+- BrowserStack
+- Lighthouse
+- GTmetrix
+- ClickUp
+- Asana
+
+## Built With
+
+This portfolio is intentionally lightweight and built without a front-end framework.
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive CSS
+- CSS-generated project mockups
+- GitHub Pages hosting
+
+There are no third-party JavaScript dependencies or external font requirements.
+
+## Features
+
+- Fully responsive layout
+- Mobile navigation
+- Semantic HTML
+- Keyboard-accessible navigation
+- Reduced-motion support
+- Scroll reveal effects
+- Copy-email functionality
+- Custom favicon
+- Social sharing metadata
+- CSS-generated project illustrations
+
+## Local Preview
+
+The site can be opened directly through `index.html`.
+
+For a local development server using Python:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open:
+Then visit:
 
 ```text
 http://localhost:8000
 ```
 
-## Publish to GitHub Pages
-
-For the repository:
+## File Structure
 
 ```text
-febwebdev.github.io
-```
-
-Upload/push the contents of this folder to the **main** branch.
-
-Your site should then be available at:
-
-```text
-https://febwebdev.github.io/
-```
-
-## File structure
-
-```text
-febwebdev-portfolio/
+febwebdev.github.io/
 ├── index.html
 ├── README.md
 ├── .nojekyll
@@ -93,11 +146,20 @@ febwebdev-portfolio/
         └── main.js
 ```
 
-## Notes
+## Deployment
 
-- No framework or build step is required.
-- No third-party JavaScript dependencies.
-- Responsive navigation is included.
-- Reduced-motion accessibility is supported.
-- The design uses system fonts, so there is no external font dependency.
-- GitHub Pages can serve this site directly.
+The site is hosted through **GitHub Pages** from the `main` branch of this repository.
+
+Updates published to the repository are reflected on:
+
+```text
+https://febwebdev.github.io/
+```
+
+## Contact
+
+Visit the portfolio for contact information or connect with me on [LinkedIn](https://www.linkedin.com/in/febelyncarino/).
+
+---
+
+© Febelyn — Front-End WordPress Developer
