@@ -1,1 +1,127 @@
 
+<!DOCTYPE html>
+<!--
+  CASE STUDY PLACEHOLDER
+  Save as:  case-studies/figma-to-wordpress/index.html
+
+  WHEN THE REAL CASE STUDY IS READY: replace this whole file and delete the noindex line.
+  Note: js/main.js is left out on purpose. This page has no menu, animations or copy button.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Agency website builds from Figma | Case study in progress | Febelyn</title>
+  <meta name="description" content="A full write-up of my Figma-to-WordPress agency builds is in progress.">
+  <meta name="author" content="Febelyn">
+
+  <!-- will remove sfter full write up is done -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0d1117">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    .soon {
+      display: grid;
+      align-items: center;
+      min-height: 100vh;
+      padding: calc(var(--header-height) + 56px) 0 80px;
+    }
+
+    .container.soon-inner {
+      width: min(calc(100% - 32px), 760px);
+    }
+
+    .soon h1 {
+      margin-bottom: 22px;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+    }
+
+    .soon-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 26px;
+      padding: 6px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #dce5ef;
+      background: rgba(255, 255, 255, 0.035);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    /* Self-contained, so it works even if .status-dot was removed from style.css */
+    .soon-status .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6be39a;
+      box-shadow: 0 0 0 5px rgba(107, 227, 154, 0.1);
+    }
+
+    .soon .hero-lede {
+      margin-bottom: 24px;
+    }
+
+    .soon-points {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 28px;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .soon-help {
+      margin-bottom: 20px;
+      color: var(--text);
+      font-weight: 650;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a class="brand" href="../../"><span class="brand-mark">&lt;feb/&gt;</span> Web Developer</a>
+    </div>
+  </header>
+
+  <main id="main" class="soon">
+    <div class="container soon-inner">
+      <p class="eyebrow">Case study</p>
+      <h1>Agency website builds from Figma</h1>
+
+      <p class="soon-status"><span class="status-dot" aria-hidden="true"></span> Full write-up in progress</p>
+
+      <p class="hero-lede">
+        Converted approved design files into responsive WordPress builds using Gutenberg and Kadence,
+        with reusable sections and structured content for easier client editing.
+      </p>
+
+      <ul class="soon-points">
+        <li>Responsive implementation across desktop, tablet, and mobile</li>
+        <li>Reusable Gutenberg/Kadence patterns and global styling</li>
+        <li>Content structures using ACF where needed</li>
+        <li>Cross-browser QA and pre-launch fixes</li>
+      </ul>
+
+      <!-- p class="soon-help">Want the details sooner? Message me and I'll walk you through the project.</p -->
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noreferrer">Message me on LinkedIn</a>
+        <a class="button button-secondary" href="../../#work">← Back to selected work</a>
+      </div>
+
+      <p class="contact-note">
+        Or email
+        <a href="mailto:carino.febelyn@gmail.com"><strong>carino.febelyn@gmail.com</strong></a>
+      </p>
+    </div>
+  </main>
+</body>
+</html>
