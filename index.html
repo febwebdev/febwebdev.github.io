@@ -50,9 +50,12 @@
   <main id="main">
     <section class="hero section" id="top">
       <div class="container hero-grid">
+
         <div class="hero-copy reveal">
           <p class="eyebrow">Front-End WordPress Developer</p>
-          <h1>I turn designs into <span class="text-accent">responsive, maintainable WordPress websites.</span></h1>
+
+          <h1>I turn designs into <span class="text-accent">responsive, maintainable</span> WordPress websites.</h1>
+
           <p class="hero-lede">
             I build and improve WordPress sites with clean front-end code, thoughtful responsive behavior,
             reusable content structures, and careful QA—from Figma handoff to launch and ongoing maintenance.
@@ -64,45 +67,63 @@
           </div>
 
           <ul class="hero-points" aria-label="Key strengths">
-            <li>10+ years in WordPress &amp; front-end development</li>
-            <li>Figma-to-WordPress, Gutenberg, Kadence &amp; ACF</li>
-            <li>Responsive development, QA &amp; maintenance</li>
+            <li>
+              <strong>10+ years</strong>
+              <span>WordPress &amp; front-end development</span>
+            </li>
+            <li>
+              <strong>Gutenberg, Kadence &amp; ACF</strong>
+              <span>Built from Figma designs</span>
+            </li>
+            <li>
+              <strong>Responsive &amp; tested</strong>
+              <span>QA and ongoing maintenance</span>
+            </li>
           </ul>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Developer toolkit illustration">
-          <div class="code-window">
-            <div class="window-bar">
-              <span></span><span></span><span></span>
-              <p>portfolio.php</p>
-            </div>
-            <pre><code><span class="code-muted">&lt;?php</span>
-<span class="code-keyword">$developer</span> = [
-  <span class="code-string">'focus'</span> =&gt; <span class="code-string">'WordPress'</span>,
-  <span class="code-string">'front_end'</span> =&gt; [
-    <span class="code-string">'HTML'</span>, <span class="code-string">'CSS'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'jQuery'</span>
-  ],
-  <span class="code-string">'wordpress'</span> =&gt; [
-    <span class="code-string">'Gutenberg'</span>, <span class="code-string">'Kadence'</span>, <span class="code-string">'ACF'</span>, <span class="code-string">'Genesis'</span>, 
-    <span class="code-string">'Theme Customization'</span>
-  ],
-  <span class="code-string">'wordpress_plugins'</span> =&gt; [
-    <span class="code-string">'Gravity Forms'</span>,
-    <span class="code-string">'WooCommerce'</span>
-  ],
-  <span class="code-string">'tools'</span> =&gt; [
-    <span class="code-string">'Figma'</span>,
-    <span class="code-string">'Chrome DevTools'</span>
-  ],
-  <span class="code-string">'detail_oriented'</span> =&gt; <span class="code-bool">true</span>
-];</code></pre>
-          </div>
+        <div class="hero-visual hero-showcase reveal" role="group" aria-label="Featured project preview">
+          <div class="showcase-stage">
 
-          <div class="floating-card floating-card-two">
-            <strong>WP</strong>
-            Design → WordPress
+            <!-- Desktop screenshot (export ~1400 x 875, WebP, under ~200 KB) -->
+            <figure class="showcase-window">
+              <div class="window-bar">
+                <span></span><span></span><span></span>
+                <p data-label="website-link"></p> 
+              </div>
+              <a class="showcase-shot" href="#work" data-label="Screenshot coming soon">
+                <img
+                  src="assets/hero-desktop.webp"
+                  width="1400" height="875"
+                  alt="Homepage of on desktop, built in WordPress"
+                  fetchpriority="high"
+                  decoding="async"
+                  onerror="this.remove()">
+                <!-- EDIT: src and alt -->
+              </a>
+            </figure>
+
+            <!-- Mobile screenshot of the same project (export ~390 x 844, WebP, under ~100 KB) -->
+            <div class="showcase-phone">
+              <div class="showcase-phone-shot" data-label="Mobile">
+                <img
+                  src="assets/hero-mobile.webp"
+                  width="390" height="844"
+                  alt="The same page of on a phone"
+                  decoding="async"
+                  onerror="this.remove()">
+                <!-- EDIT: src and alt -->
+              </div>
+            </div>
+
+            <div class="floating-card floating-card-two">
+              <strong>WP</strong>
+              Design → WordPress
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
 
