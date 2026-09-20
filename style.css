@@ -1284,10 +1284,10 @@ p {
   }
 }
 
+/* cotnact section */
 .contact-section {
   padding-top: 70px;
 }
-
 .contact-card {
   padding: 54px;
   border: 1px solid rgba(139,233,193,.2);
@@ -1297,28 +1297,62 @@ p {
     linear-gradient(135deg, rgba(139,233,193,.055), rgba(182,167,255,.04));
   box-shadow: var(--shadow);
 }
-
 .contact-card h2 {
   max-width: 900px;
   margin-bottom: 22px;
 }
-
 .contact-card > div:first-child > p:last-child {
   max-width: 760px;
   font-size: 1.02rem;
 }
-
 .contact-actions {
   margin-top: 28px;
 }
-
 .contact-note {
   margin: 20px 0 0;
   font-size: .82rem;
 }
-
 .contact-note strong {
   color: #dce5ef;
+}
+.contact-card .contact-note {
+  margin-top: 22px;
+  font-size: 0.92rem;
+}
+.contact-email {
+  text-decoration: underline;
+  text-decoration-color: rgba(220, 229, 239, 0.3);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms ease;
+}
+.contact-email:hover,
+.contact-email:focus-visible {
+  text-decoration-color: var(--accent);
+}
+.contact-email:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(139, 233, 193, 0.35);
+  outline-offset: 4px;
+}
+.copy-chip {
+  margin-left: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.78rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+.copy-chip:hover {
+  color: var(--accent);
+  border-color: rgba(139, 233, 193, 0.35);
+}
+.copy-chip:focus-visible {
+  outline: 3px solid rgba(139, 233, 193, 0.35);
+  outline-offset: 3px;
 }
 
 code {
