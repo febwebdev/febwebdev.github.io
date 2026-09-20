@@ -1137,6 +1137,71 @@ p {
   font-size: 0.92rem;
 }
 
+/* Work section */
+.project-preview.has-shot {
+  background:
+    radial-gradient(circle at 20% 16%, rgba(139, 233, 193, 0.14), transparent 18rem),
+    linear-gradient(135deg, #13202a, #10151d);
+}
+/* Placeholder label. Sits under the image, so it disappears as soon as a real screenshot loads. */
+.project-preview.has-shot::before {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  text-align: center;
+  color: var(--muted);
+  font: 700 0.8rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.project-preview.has-shot img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+/* ---------- Case study link ---------- */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start; /* stops it stretching across the featured card's flex column */
+  margin-top: 24px;
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+.project-link span {
+  transition: transform 150ms ease;
+}
+.project-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-link:hover span {
+  transform: translateX(3px);
+}
+.project-link:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(139, 233, 193, 0.35);
+  outline-offset: 4px;
+}
+.project-result {
+  margin: 0 0 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+.project-result strong {
+  color: var(--accent);
+}
+
 /* Skills section */
 .skills-legend {
   display: flex;
