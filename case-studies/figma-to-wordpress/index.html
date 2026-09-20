@@ -85,9 +85,25 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header is-scrolled">
+  <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="../../"><span class="brand-mark">&lt;feb/&gt;</span> Web Developer</a>
+      <a class="brand" href="#top" aria-label="Febelyn home">
+        <span class="brand-mark" aria-hidden="true">&lt;feb/&gt;</span>
+        <span>Web Developer</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </nav>
     </div>
   </header>
 
@@ -123,5 +139,14 @@
       </p>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year></span> Febelyn. Built with HTML, CSS & JavaScript.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>Email copied</div>
 </body>
 </html>
