@@ -477,7 +477,7 @@ p {
    background: rgba(255, 255, 255, 0.018);
 }
 .proof-strip .testimonial {
-  max-width: 760px;
+  max-width: 770px;
   margin: 0 auto;
   text-align: center;
 }
@@ -493,8 +493,8 @@ p {
   letter-spacing: -0.015em;
 }
 .proof-strip .testimonial blockquote strong {
-  color: var(--text);
-  font-weight: 780;
+  color: var(--accent);
+  font-weight: 700;
 }
 .proof-strip .testimonial figcaption {
   display: flex;
