@@ -1249,16 +1249,39 @@ p {
   font: 800 0.72rem ui-monospace,monospace;
   padding-top: 3px;
 }
-
 .about-card strong {
   display: block;
   margin-bottom: 4px;
   color: var(--text);
 }
-
 .about-card li p {
   margin: 0;
   font-size: .9rem;
+}
+.about-photo {
+  width: 88px;
+  height: 88px;
+  margin: 0 0 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--panel);
+}
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+@media (max-width: 760px) {
+  .about-links .button {
+    width: 100%;
+  }
 }
 
 .contact-section {
