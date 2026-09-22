@@ -1165,6 +1165,9 @@ p {
   object-fit: cover;
   object-position: top center;
 }
+.villa-book-card.project-preview.has-shot img {
+   object-position: 50% 70%;
+}
 /* ---------- Case study link ---------- */
 .project-link {
   display: inline-flex;
