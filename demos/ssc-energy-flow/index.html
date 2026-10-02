@@ -1,1 +1,248 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo for SSC Website Application</title>
+
+<style>
+:root{--ink:#0f2b2e;--muted:#476467;--amber:#f2a516;--green:#16a36a;--day:#e4f2f5;--night:#0e2236}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+.ssc{max-width:860px;margin:0 auto}
+.ssc h2{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
+.ssc .lead{margin:0 0 1.2rem;color:var(--muted);max-width:60ch}
+.scene{--scene-bg:var(--day);background:var(--scene-bg);color:var(--ink);border-radius:18px;transition:background-color .6s,color .6s;overflow:hidden}
+.scene[data-stage="3"],.scene[data-stage="4"]{--scene-bg:var(--night);color:#e8f1f6}
+.scene svg{display:block;width:100%;height:auto}
+.track{fill:none;stroke:currentColor;stroke-opacity:.18;stroke-width:3}
+.flow{fill:none;stroke:var(--amber);stroke-width:5;stroke-linecap:round;stroke-dasharray:2 12;opacity:0;transition:opacity .4s}
+.flow.on{opacity:1;animation:dash 1s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-14}}
+.node{opacity:.28;transition:opacity .4s,filter .4s}
+.node.on{opacity:1;filter:drop-shadow(0 0 8px rgba(242,165,22,.55))}
+.lbl{font-size:22px;font-weight:700;fill:currentColor;text-anchor:middle}
+.sun,.moon{transition:opacity .6s}
+.moon{opacity:0}
+.scene[data-stage="3"] .sun,.scene[data-stage="4"] .sun{opacity:0}
+.scene[data-stage="3"] .moon,.scene[data-stage="4"] .moon{opacity:1}
+.b3{opacity:0;transition:opacity .4s}
+.b2{transition:opacity .4s}
+.scene[data-stage="2"] .b3{opacity:1}
+.scene[data-stage="4"] .b2,.scene[data-stage="4"] .b3{opacity:0}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.tab{font:inherit;font-weight:600;padding:14px 10px;border:2px solid #c5d6d8;border-radius:12px;background:#fff;color:var(--ink);cursor:pointer;min-height:52px;transition:background-color .25s,border-color .25s,color .25s}
+.tab:hover{border-color:var(--green)}
+.tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.pane{padding:4px 2px;max-width:62ch}
+.pane h3{margin:.2em 0 .3em;font-size:1.25rem}
+.pane p{margin:0}
+.pane:not([hidden]){animation:fade .4s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (max-width:600px){
+ .tabs{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+ *{transition:none!important}
+ .flow.on{animation:none;stroke-dasharray:none}
+ .pane:not([hidden]){animation:none}
+}
+.demo-label{
+  margin:0 0 .5rem;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--green);
+}
+</style>
+</head>
+
+<body>
+
+<section class="ssc" aria-labelledby="ssc-title">
+
+ <p class="demo-label">Demo for SSC Website Application</p>
+	<h2 id="ssc-title">Your home, powered around the clock</h2>
+
+ <p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ </p>
+
+ <div class="scene" id="scene" data-stage="1">
+
+  <svg
+   viewBox="0 0 720 320"
+   role="img"
+   aria-label="Diagram of solar panels, a battery, a home and an electric vehicle, with energy flowing between them. Use the buttons below to choose a stage."
+  >
+
+   <path class="track" d="M150 120 C250 20 480 20 540 70"/>
+   <path class="track" d="M160 170 L270 170"/>
+   <path class="track" d="M390 160 C450 140 480 110 540 100"/>
+   <path class="track" d="M390 180 C450 200 480 230 540 245"/>
+
+   <path class="flow" data-k="f1" d="M150 120 C250 20 480 20 540 70"/>
+   <path class="flow" data-k="f2" d="M160 170 L270 170"/>
+   <path class="flow" data-k="f3" d="M390 160 C450 140 480 110 540 100"/>
+   <path class="flow" data-k="f4" d="M390 180 C450 200 480 230 540 245"/>
+
+   <g class="node" data-k="solar" transform="translate(100 170)">
+    <g class="sun">
+     <circle cy="-62" r="17" fill="#f2a516"/>
+     <g stroke="#f2a516" stroke-width="4" stroke-linecap="round">
+      <path d="M0-90v-8M0-34v-8M-28-62h-8M28-62h8M-20-82l-6-6M20-82l6-6M-20-42l-6 6M20-42l6 6"/>
+     </g>
+    </g>
+
+    <g class="moon">
+     <circle cy="-62" r="17" fill="#dce8f2"/>
+     <circle cx="9" cy="-68" r="15" style="fill:var(--scene-bg)"/>
+    </g>
+
+    <rect x="-52" y="-12" width="104" height="62" rx="6" fill="#1d5c63"/>
+    <path d="M-17-12v62M17-12v62M-52 9h104M-52 30h104" stroke="#8fc6cc" stroke-width="2"/>
+    <text class="lbl" y="86">Solar</text>
+   </g>
+
+   <g class="node" data-k="battery" transform="translate(330 170)">
+    <rect x="-58" y="-42" width="116" height="84" rx="12" fill="none" stroke="currentColor" stroke-width="5"/>
+    <rect x="58" y="-13" width="9" height="26" rx="3" fill="currentColor"/>
+    <rect x="-46" y="-30" width="28" height="60" rx="5" fill="#16a36a"/>
+    <rect class="b2" x="-14" y="-30" width="28" height="60" rx="5" fill="#16a36a"/>
+    <rect class="b3" x="18" y="-30" width="28" height="60" rx="5" fill="#16a36a"/>
+    <text class="lbl" y="82">Battery</text>
+   </g>
+
+   <g class="node" data-k="home" transform="translate(600 80)">
+    <path d="M-48 8L0-34L48 8H34V46H-34V8Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="-9" y="20" width="18" height="26" rx="2" fill="#f2a516"/>
+    <text class="lbl" y="82">Home</text>
+   </g>
+
+   <g class="node" data-k="ev" transform="translate(600 240)">
+    <path d="M-30-12L-18-32H18L30-12Z" fill="#16a36a"/>
+    <rect x="-52" y="-12" width="104" height="32" rx="11" fill="#16a36a"/>
+    <circle cx="-28" cy="22" r="10" fill="#0f2b2e" stroke="#e8f1f6" stroke-width="3"/>
+    <circle cx="28" cy="22" r="10" fill="#0f2b2e" stroke="#e8f1f6" stroke-width="3"/>
+    <path d="M3-9L-7 5H0L-3 17L8 2H1Z" fill="#f2a516"/>
+    <text class="lbl" y="62">EV</text>
+   </g>
+
+  </svg>
+
+ </div>
+
+ <div class="tabs" role="group" aria-label="Energy stages">
+
+  <button class="tab" type="button" aria-pressed="true">
+   Generate
+  </button>
+
+  <button class="tab" type="button" aria-pressed="false">
+   Store
+  </button>
+
+  <button class="tab" type="button" aria-pressed="false">
+   Power at night
+  </button>
+
+  <button class="tab" type="button" aria-pressed="false">
+   Charge your EV
+  </button>
+
+ </div>
+
+ <div aria-live="polite">
+
+  <div class="pane">
+   <h3>Solar generates your power by day</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+
+  <div class="pane" hidden>
+   <h3>Extra energy goes into the battery</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+
+  <div class="pane" hidden>
+   <h3>The battery takes over after dark</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse. </p>
+  </div>
+
+  <div class="pane" hidden>
+   <h3>Charge your car from your own roof</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+  </div>
+
+ </div>
+
+</section>
+
+<script>
+(function(){
+
+ var scene=document.getElementById('scene'),
+     tabs=[].slice.call(document.querySelectorAll('.tab')),
+     panes=[].slice.call(document.querySelectorAll('.pane')),
+     parts=[].slice.call(scene.querySelectorAll('[data-k]')),
+     map=[
+      ['solar','home','f1'],
+      ['solar','battery','f2'],
+      ['battery','home','f3'],
+      ['battery','ev','f4']
+     ];
+
+ function go(n){
+
+  scene.setAttribute('data-stage',n);
+
+  tabs.forEach(function(t,i){
+   t.setAttribute('aria-pressed',String(i+1===n));
+  });
+
+  panes.forEach(function(p,i){
+   p.hidden=(i+1!==n);
+  });
+
+  parts.forEach(function(el){
+   el.classList.toggle(
+    'on',
+    map[n-1].indexOf(el.getAttribute('data-k'))>-1
+   );
+  });
+
+ }
+
+ tabs.forEach(function(t,i){
+
+  t.addEventListener('click',function(){
+   go(i+1);
+  });
+
+  t.addEventListener('keydown',function(e){
+
+   var j=
+    e.key==='ArrowRight'
+     ? i+1
+     : e.key==='ArrowLeft'
+      ? i-1
+      : -1;
+
+   if(j>=0&&j<tabs.length){
+    e.preventDefault();
+    tabs[j].focus();
+    go(j+1);
+   }
+
+  });
+
+ });
+ go(1);
+})();
+</script>
+
+</body>
+</html>
