@@ -8,9 +8,28 @@ const navLinks = nav ? [...nav.querySelectorAll("a")] : [];
 const year = document.querySelector("[data-year]");
 const copyEmailButton = document.querySelector("[data-copy-email]");
 const toast = document.querySelector("[data-toast]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+const syncThemeToggle = () => {
+  if (!themeToggle) return;
+  const isDark = document.documentElement.dataset.theme === "dark";
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+};
+
+if (themeToggle) {
+  syncThemeToggle();
+  themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
+    syncThemeToggle();
+  });
 }
 
 const updateHeader = () => {
