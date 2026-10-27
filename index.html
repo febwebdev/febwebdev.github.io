@@ -19,8 +19,8 @@
   <link rel="canonical" href="https://febwebdev.github.io/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111314" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f2ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0c10" media="(prefers-color-scheme: dark)">
 
   <script>
     // Apply the saved or system theme before first paint to avoid a flash.
@@ -37,7 +37,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
 
@@ -62,7 +62,7 @@
   <header class="site-header" data-header>
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Febelyn, home">
-        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
         <span>Febelyn</span>
       </a>
 
@@ -91,11 +91,11 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
+        <div class="bento">
+          <div class="tile tile-intro reveal">
             <p class="status-pill"><span class="status-dot" aria-hidden="true"></span> Open to remote front-end roles · UTC+8</p>
 
-            <h1>I turn designs into <em>responsive, maintainable</em> <span class="marker">WordPress</span> websites.</h1>
+            <h1>I turn designs into <span class="hl">responsive, maintainable</span> WordPress websites.</h1>
 
             <p class="hero-lede">
               I'm Febelyn, a front-end WordPress developer. I build and improve WordPress sites with clean front-end code,
@@ -109,79 +109,69 @@
             </div>
           </div>
 
-          <div class="build-visual reveal" aria-hidden="true">
-            <div class="build-card">
-              <p class="build-card-label"><span>Figma frame</span><b>Design</b></p>
-              <div class="frame-sketch">
-                <i class="f-nav"></i>
-                <i class="f-title"></i>
-                <i class="f-img"></i>
-                <i class="f-text"></i>
-              </div>
-            </div>
-            <div class="build-card build-card-blocks">
-              <p class="build-card-label"><span>Gutenberg + ACF</span><b>Build</b></p>
-              <ul class="block-list">
-                <li>kadence/rowlayout</li>
-                <li>acf/project-grid</li>
-                <li>core/buttons</li>
-              </ul>
-            </div>
-            <div class="build-card build-card-qa">
-              <p class="build-card-label"><span>Pre-launch</span><b>QA</b></p>
-              <ul class="qa-list">
-                <li>Desktop, tablet, mobile</li>
-                <li>Cross-browser checks</li>
-                <li>Forms &amp; notifications</li>
-              </ul>
-            </div>
+          <div class="tile tile-editor reveal" aria-hidden="true">
+            <p class="editor-bar"><span></span><span></span><span></span><b>page.html</b></p>
+            <ul class="editor-blocks">
+              <li><code>kadence/rowlayout</code><em>Design</em></li>
+              <li><code>acf/project-grid</code><em>Build</em></li>
+              <li><code>core/buttons</code><em>Build</em></li>
+              <li><code>qa/responsive</code><em>✓ Pass</em></li>
+            </ul>
+            <p class="editor-insert"><span>/</span>Type / to choose a block<i class="caret"></i></p>
           </div>
+
+          <div class="tile tile-stat tile-accent reveal">
+            <strong>100+</strong>
+            <span>WordPress sites delivered for agency clients worldwide</span>
+          </div>
+
+          <div class="tile tile-stat reveal">
+            <strong>10+</strong>
+            <span>years building and maintaining WordPress sites</span>
+          </div>
+
+          <div class="tile tile-stat reveal">
+            <strong>5+</strong>
+            <span>years working remotely with agencies</span>
+          </div>
+
+          <figure class="tile tile-quote reveal">
+            <blockquote>
+              <p>“Febelyn is an excellent developer and required very little oversight from our team. Delivered work correctly on the first try.”</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+              <span>Website rebrand client, 2022</span>
+            </figcaption>
+          </figure>
         </div>
-
-        <ul class="stats reveal" aria-label="Experience at a glance">
-          <li><strong>100+</strong><span>WordPress sites delivered for agency clients worldwide</span></li>
-          <li><strong>10+</strong><span>years building and maintaining WordPress sites</span></li>
-          <li><strong>5+</strong><span>years working remotely with agencies</span></li>
-        </ul>
       </div>
     </section>
 
-    <section class="proof" aria-label="Client testimonial">
-      <div class="container">
-        <figure class="testimonial reveal">
-          <blockquote>
-            <p>
-              “Febelyn is an excellent developer and required very little oversight from our team.
-              Delivered work correctly on the first try.”
-            </p>
-          </blockquote>
-          <figcaption>
-            <span class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
-            <span>Website rebrand client, 2022</span>
-          </figcaption>
-        </figure>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Gutenberg</span><span>Kadence</span><span>ACF Pro</span><span>Figma</span><span>Gravity Forms</span><span>WooCommerce</span><span>PHP</span><span>CSS</span><span>JavaScript</span><span>Cross-browser QA</span>
+        <span>Gutenberg</span><span>Kadence</span><span>ACF Pro</span><span>Figma</span><span>Gravity Forms</span><span>WooCommerce</span><span>PHP</span><span>CSS</span><span>JavaScript</span><span>Cross-browser QA</span>
       </div>
-    </section>
+    </div>
 
     <section class="section" id="work">
       <div class="container">
         <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Selected work</p>
-            <h2>Practical WordPress work, not just pretty screens.</h2>
-          </div>
+          <p class="eyebrow"><span>01</span> Selected work</p>
+          <h2>Practical WordPress work, not just pretty screens.</h2>
           <p>
             Client names are intentionally omitted where appropriate. These examples focus on the problems solved,
             my contribution, and the tools used.
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="work-list">
 
           <!-- 1. Figma builds. To show a screenshot, replace the <ol class="process"> with:
                <img src="images/work-figma-to-wordpress.webp" width="1400" height="875" alt="..." loading="lazy" decoding="async"> -->
-          <article class="project-card project-featured reveal">
-            <div class="project-art">
+          <article class="work-item work-featured reveal">
+            <div class="work-media work-media-process">
               <ol class="process" aria-label="Build process">
                 <li>Approved Figma design</li>
                 <li>Global styles &amp; patterns</li>
@@ -189,14 +179,14 @@
                 <li>Responsive QA &amp; launch</li>
               </ol>
             </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">01</span><span>Design → Development</span></div>
+            <div class="work-body">
+              <p class="work-meta"><span class="work-num">01</span>Design → Development</p>
               <h3>Agency website builds from Figma</h3>
               <p>
                 Converted approved design files into responsive WordPress builds using Gutenberg and Kadence,
                 with reusable sections and structured content for easier client editing.
               </p>
-              <ul>
+              <ul class="check-list">
                 <li>Responsive implementation across desktop, tablet, and mobile</li>
                 <li>Reusable Gutenberg/Kadence patterns and global styling</li>
                 <li>Content structures using ACF where needed</li>
@@ -214,16 +204,16 @@
           </article>
 
           <!-- 2. Villa booking -->
-          <article class="villa-book-card project-card reveal">
-            <div class="project-preview">
+          <article class="work-item reveal">
+            <div class="work-media work-media-tall">
               <img
                 src="images/work-villa-booking-full.webp"
                 width="717" height="910"
                 alt="Booking form with date picker on a villa website"
                 loading="lazy" decoding="async">
             </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">02</span><span>Custom functionality</span></div>
+            <div class="work-body">
+              <p class="work-meta"><span class="work-num">02</span>Custom functionality</p>
               <h3>Villa booking workflow</h3>
               <p>
                 Built a custom booking experience around WordPress content, date availability, minimum-stay rules,
@@ -236,16 +226,16 @@
           </article>
 
           <!-- 3. Portfolio rebuild -->
-          <article class="project-card reveal">
-            <div class="project-preview">
+          <article class="work-item reveal">
+            <div class="work-media">
               <img
                 src="images/work-portfolio-rebuild.webp"
                 width="1202" height="946"
                 alt="Filterable project portfolio grid built with custom post types"
                 loading="lazy" decoding="async">
             </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">03</span><span>Content architecture</span></div>
+            <div class="work-body">
+              <p class="work-meta"><span class="work-num">03</span>Content architecture</p>
               <h3>Portfolio content rebuild</h3>
               <p>
                 Reworked an existing portfolio into structured WordPress content using custom post types,
@@ -257,33 +247,35 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">04</span><span>Troubleshooting</span></div>
-              <h3>Form delivery &amp; anti-spam troubleshooting</h3>
-              <p>
-                Investigated form-delivery issues by reviewing entries, notification logs, SMTP connectors,
-                and reCAPTCHA configuration rather than treating the form itself as the only possible failure point.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>Gravity Forms</li><li>SMTP</li><li>reCAPTCHA</li><li>QA</li>
-              </ul>
-            </div>
-          </article>
+          <div class="work-pair">
+            <article class="work-item work-compact reveal">
+              <div class="work-body">
+                <p class="work-meta"><span class="work-num">04</span>Troubleshooting</p>
+                <h3>Form delivery &amp; anti-spam troubleshooting</h3>
+                <p>
+                  Investigated form-delivery issues by reviewing entries, notification logs, SMTP connectors,
+                  and reCAPTCHA configuration rather than treating the form itself as the only possible failure point.
+                </p>
+                <ul class="tag-list" aria-label="Tools">
+                  <li>Gravity Forms</li><li>SMTP</li><li>reCAPTCHA</li><li>QA</li>
+                </ul>
+              </div>
+            </article>
 
-          <article class="project-card reveal">
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">05</span><span>Ongoing support</span></div>
-              <h3>WordPress maintenance &amp; production fixes</h3>
-              <p>
-                Handled content updates, responsive fixes, plugin-related troubleshooting, forms, layout issues,
-                and QA across existing client websites.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>WordPress</li><li>CSS</li><li>Plugins</li><li>QA</li><li>Maintenance</li>
-              </ul>
-            </div>
-          </article>
+            <article class="work-item work-compact reveal">
+              <div class="work-body">
+                <p class="work-meta"><span class="work-num">05</span>Ongoing support</p>
+                <h3>WordPress maintenance &amp; production fixes</h3>
+                <p>
+                  Handled content updates, responsive fixes, plugin-related troubleshooting, forms, layout issues,
+                  and QA across existing client websites.
+                </p>
+                <ul class="tag-list" aria-label="Tools">
+                  <li>WordPress</li><li>CSS</li><li>Plugins</li><li>QA</li><li>Maintenance</li>
+                </ul>
+              </div>
+            </article>
+          </div>
 
         </div>
       </div>
@@ -292,10 +284,8 @@
     <section class="section section-alt" id="skills">
       <div class="container">
         <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Skills &amp; tools</p>
-            <h2>A WordPress-focused front-end toolkit.</h2>
-          </div>
+          <p class="eyebrow"><span>02</span> Skills &amp; tools</p>
+          <h2>A WordPress-focused front-end toolkit.</h2>
           <p>
             Comfortable joining an existing workflow, following established design systems, or building reusable
             front-end patterns from scratch.
@@ -303,7 +293,7 @@
         </div>
 
         <div class="skills-grid reveal">
-          <div class="skill-group">
+          <div class="skill-group skill-wide">
             <h3>WordPress</h3>
             <p>Theme customization and block-based builds, using child themes and established frameworks.</p>
             <ul class="tag-list">
@@ -350,7 +340,7 @@
             </ul>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group skill-wide">
             <h3>Workflow &amp; QA</h3>
             <p>Responsive and cross-browser testing, staging review, performance checks, and careful handoff.</p>
             <ul class="tag-list">
@@ -385,62 +375,64 @@
     </section>
 
     <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-copy reveal">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="eyebrow"><span>03</span> About</p>
 
-          <!-- Portrait: add images/febelyn.webp (square, at least 192 x 192) -->
-          <figure class="about-photo">
-            <img
-              src="images/febelyn.webp"
-              width="192" height="192"
-              alt="Portrait of Febelyn"
-              decoding="async"
-              onerror="this.parentElement.remove()">
-          </figure>
+            <!-- Portrait: add images/febelyn.webp (square, at least 192 x 192) -->
+            <figure class="about-photo">
+              <img
+                src="images/febelyn.webp"
+                width="192" height="192"
+                alt="Portrait of Febelyn"
+                decoding="async"
+                onerror="this.parentElement.remove()">
+            </figure>
 
-          <p class="eyebrow">About</p>
-          <h2>I like the unglamorous work that keeps websites dependable.</h2>
+            <h2>I like the unglamorous work that keeps websites dependable.</h2>
+          </div>
 
-          <p>
-            I'm Febelyn, a front-end WordPress developer with 10+ years of experience building and maintaining websites
-            for agencies and clients. A large part of my work starts with a finished design and ends with a responsive,
-            editable WordPress site that keeps the details of that design intact.
-          </p>
-          <p>
-            That means debugging layout issues, tracing plugin conflicts, checking forms, testing responsive behavior,
-            and making sure a small production update doesn't break something elsewhere.
-          </p>
-          <p>
-            I work remotely and I'm comfortable in written communication: task comments, Slack, documentation,
-            and staging environments. I'm used to established agency workflows.
-          </p>
+          <div class="about-text reveal">
+            <p>
+              I'm Febelyn, a front-end WordPress developer with 10+ years of experience building and maintaining websites
+              for agencies and clients. A large part of my work starts with a finished design and ends with a responsive,
+              editable WordPress site that keeps the details of that design intact.
+            </p>
+            <p>
+              That means debugging layout issues, tracing plugin conflicts, checking forms, testing responsive behavior,
+              and making sure a small production update doesn't break something elsewhere.
+            </p>
+            <p>
+              I work remotely and I'm comfortable in written communication: task comments, Slack, documentation,
+              and staging environments. I'm used to established agency workflows.
+            </p>
 
-          <div class="about-links">
-            <a class="button button-secondary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">View LinkedIn profile ↗</a>
-            <!-- <a class="button button-secondary" href="files/febelyn-resume.pdf">Download resume (PDF)</a> -->
+            <div class="about-links">
+              <a class="button button-secondary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">View LinkedIn profile ↗</a>
+              <!-- <a class="button button-secondary" href="files/febelyn-resume.pdf">Download resume (PDF)</a> -->
+            </div>
           </div>
         </div>
 
-        <aside class="about-card reveal">
-          <p class="about-card-label">How I work</p>
+        <div class="process-steps reveal">
+          <p class="process-label">How I work</p>
           <ol>
-            <li><span aria-hidden="true">01</span><div><strong>Understand the goal</strong><p>Review the design, requirements, existing stack, and editor workflow.</p></div></li>
-            <li><span aria-hidden="true">02</span><div><strong>Build for reuse</strong><p>Create responsive components and content structures that are easy to maintain.</p></div></li>
-            <li><span aria-hidden="true">03</span><div><strong>Test the details</strong><p>Check breakpoints, content edge cases, interactions, forms, and browser behavior.</p></div></li>
-            <li><span aria-hidden="true">04</span><div><strong>Communicate clearly</strong><p>Share concise updates, flag blockers early, and document anything the next person needs.</p></div></li>
+            <li><span aria-hidden="true">01</span><strong>Understand the goal</strong><p>Review the design, requirements, existing stack, and editor workflow.</p></li>
+            <li><span aria-hidden="true">02</span><strong>Build for reuse</strong><p>Create responsive components and content structures that are easy to maintain.</p></li>
+            <li><span aria-hidden="true">03</span><strong>Test the details</strong><p>Check breakpoints, content edge cases, interactions, forms, and browser behavior.</p></li>
+            <li><span aria-hidden="true">04</span><strong>Communicate clearly</strong><p>Share concise updates, flag blockers early, and document anything the next person needs.</p></li>
           </ol>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-card reveal">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Open to long-term front-end roles, WordPress or plain HTML/CSS/JS.</h2>
-            <p>I'm looking for a long-term, remote front-end role. WordPress is my specialty, and I'm comfortable working in plain HTML, CSS, and JavaScript. I also take on select projects and ongoing website support.</p>
-          </div>
+          <p class="eyebrow"><span>04</span> Contact</p>
+          <h2>Open to long-term front-end roles, WordPress or plain HTML/CSS/JS.</h2>
+          <p class="contact-lede">I'm looking for a long-term, remote front-end role. WordPress is my specialty, and I'm comfortable working in plain HTML, CSS, and JavaScript. I also take on select projects and ongoing website support.</p>
 
           <div class="contact-actions">
             <a class="button button-primary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">Message me on LinkedIn</a>
@@ -449,7 +441,7 @@
 
           <p class="contact-note">
             <a class="contact-email" href="mailto:carino.febelyn@gmail.com">carino.febelyn@gmail.com</a>
-            <button class="copy-chip button button-secondary" type="button" data-copy-email data-email="carino.febelyn@gmail.com">Copy email</button>
+            <button class="copy-chip" type="button" data-copy-email data-email="carino.febelyn@gmail.com">Copy email</button>
           </p>
           <p class="contact-note">Based in the Philippines (UTC+8). Available for remote work immediately. I usually reply within one business day.</p>
         </div>
