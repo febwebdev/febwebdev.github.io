@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Febelyn, WordPress Developer**.
 
-🌐 **Live site:** [febwebdev.github.io](https://febwebdev.github.io/)
+🌐 **Live site:** [febwebdev.com](https://febwebdev.com/)
 
 ## About
 
@@ -152,12 +152,12 @@ The site is hosted through **GitHub Pages** from the `main` branch of this repos
 Updates published to the repository are reflected on:
 
 ```text
-https://febwebdev.github.io/
+https://febwebdev.com/
 ```
 
 ## Contact
 
-Use the contact form on the [portfolio](https://febwebdev.github.io/#contact) to get in touch.
+Use the contact form on the [portfolio](https://febwebdev.com/#contact) to get in touch.
 
 ---
 
