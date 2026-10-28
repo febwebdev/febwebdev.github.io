@@ -1,118 +1,60 @@
-
-document.documentElement.classList.add("js");
-
-const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
-const navLinks = nav ? [...nav.querySelectorAll("a")] : [];
 const year = document.querySelector("[data-year]");
-const copyEmailButton = document.querySelector("[data-copy-email]");
-const toast = document.querySelector("[data-toast]");
-const themeToggle = document.querySelector("[data-theme-toggle]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const syncThemeToggle = () => {
-  if (!themeToggle) return;
-  const isDark = document.documentElement.dataset.theme === "dark";
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+// Mobile navigation
+const setNav = (open) => {
+  if (!navToggle || !nav) return;
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  nav.classList.toggle("is-open", open);
+  document.body.classList.toggle("nav-open", open);
 };
-
-if (themeToggle) {
-  syncThemeToggle();
-  themeToggle.addEventListener("click", () => {
-    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("theme", next);
-    } catch {}
-    syncThemeToggle();
-  });
-}
-
-const updateHeader = () => {
-  if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 12);
-};
-
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
 
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("nav-open", isOpen);
+    setNav(navToggle.getAttribute("aria-expanded") !== "true");
   });
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-open");
-    });
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setNav(false));
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && nav.classList.contains("is-open")) {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-open");
+      setNav(false);
       navToggle.focus();
     }
   });
-}
 
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealElements.forEach((element) => observer.observe(element));
-} else {
-  revealElements.forEach((element) => element.classList.add("is-visible"));
-}
-
-if (copyEmailButton) {
-  copyEmailButton.addEventListener("click", async () => {
-    const email = copyEmailButton.dataset.email;
-
-    if (!email || email === "ADD-YOUR-EMAIL-HERE") {
-      showToast("Add your email in index.html first");
-      return;
-    }
-
-    try {
-      await navigator.clipboard.writeText(email);
-      showToast("Email copied");
-    } catch {
-      showToast(email);
-    }
+  window.matchMedia("(min-width: 761px)").addEventListener("change", (event) => {
+    if (event.matches) setNav(false);
   });
 }
 
-let toastTimer;
+// Contact form: posts to Google Forms in the background, so replies land in
+// the linked Google Sheet without showing an email address on the site.
+document.querySelectorAll("[data-gform]").forEach((form) => {
+  const status = form.querySelector(".form-status");
+  const button = form.querySelector("button[type='submit']");
 
-function showToast(message) {
-  if (!toast) return;
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    button.disabled = true;
+    status.textContent = "Sending…";
 
-  toast.textContent = message;
-  toast.classList.add("is-visible");
-
-  window.clearTimeout(toastTimer);
-  toastTimer = window.setTimeout(() => {
-    toast.classList.remove("is-visible");
-  }, 2200);
-}
+    try {
+      await fetch(form.action, { method: "POST", mode: "no-cors", body: new FormData(form) });
+      form.reset();
+      status.textContent = "Thanks! Your message is on its way. I'll reply within one business day.";
+    } catch {
+      status.textContent = "Something went wrong. Please try again in a moment.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
