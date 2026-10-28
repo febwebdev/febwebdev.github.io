@@ -139,7 +139,6 @@ febwebdev.github.io/
 ├── .nojekyll
 └── assets/
     ├── favicon.svg
-    ├── og-image.svg
     ├── css/
     │   └── style.css
     └── js/
