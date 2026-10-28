@@ -1,6 +1,14 @@
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const year = document.querySelector("[data-year]");
+const header = document.querySelector(".site-header");
+
+// Show a divider under the sticky header once the page has scrolled.
+if (header) {
+  const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
 
 if (year) {
   year.textContent = new Date().getFullYear();

@@ -38,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 24px;
+  scroll-padding-top: calc(var(--header-height) + 16px);
 }
 
 body {
@@ -116,8 +116,19 @@ p {
 /* ---------- Header ---------- */
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 50;
+  background: rgba(243, 247, 252, 0.92);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 10px 24px -20px rgba(27, 42, 74, 0.5);
 }
 
 .header-inner {
