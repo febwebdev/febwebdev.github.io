@@ -1,0 +1,42 @@
+# febwebdev
+
+> Portfolio of Febelyn, a dedicated, loyal remote WordPress developer with 10+ years of experience and 5+ years working remotely with agencies. Febelyn builds WordPress websites from approved Figma designs, fixes websites when they stop working, and looks after live websites. Open to a long-term remote WordPress role. Time zone: UTC+8.
+
+## What Febelyn does
+
+- Builds WordPress websites from Figma designs that look right on desktop, tablet and phone, and that clients can edit themselves (Gutenberg, Kadence, reusable patterns).
+- Sets up WordPress for editors: ACF fields, custom post types, taxonomies and PHP templates, so routine changes happen in WordPress, not in code.
+- Fixes problems on live websites: contact forms that don't deliver email, plugin conflicts, layout bugs, cross-browser issues.
+- Looks after live client websites: updates, layout fixes and checks before anything is handed back.
+- Works in whatever page builder a team already uses: Elementor, Beaver Builder, Divi, Bricks, WPBakery, SiteOrigin, Avada.
+- Is learning to use AI tools where they save time, and still tests every page and form personally.
+
+## Selected work
+
+- Fixed: contact form messages weren't reaching the client. Traced it through Gravity Forms entries, notification logs, the SMTP connector and reCAPTCHA settings, and fixed the real cause.
+- Shipped: villa bookings with live availability. A date picker fed by an iCal calendar, minimum-stay rules, pricing with taxes and fees, and a Gravity Forms enquiry.
+- Shipped: a portfolio the client can update without a developer. Moved hand-built pages into custom post types with a filterable grid.
+- Shipped: approved Figma designs built in Gutenberg and Kadence with reusable patterns.
+- Demo: an animated, keyboard-friendly solar and battery explainer: https://febwebdev.com/demos/solar-energy-flow/
+
+## Toolbox
+
+- Build: Gutenberg, Kadence, Genesis, GeneratePress, child themes, HTML, CSS/SCSS, JavaScript
+- Content: ACF Pro, custom post types, taxonomies, PHP templates, shortcodes
+- Forms and stores: Gravity Forms, WooCommerce, SMTP, reCAPTCHA
+- QA: Chrome DevTools, BrowserStack, LambdaTest, Lighthouse, GTmetrix
+- Teamwork: Figma, ClickUp, Asana, Slack, written handoff notes
+
+## Working style
+
+- Remote, asynchronous and written: clear updates in task comments, Slack, ClickUp or Asana, with blockers flagged early.
+- Dedicated and loyal: prefers long-term work with one team and looks after their clients' websites with long-term care.
+
+## Contact
+
+- Contact form: https://febwebdev.com/#contact (replies within one business day)
+
+## Pages
+
+- [Home](https://febwebdev.com/): about, work log, toolbox, FAQ and contact form
+- [FAQ](https://febwebdev.com/#faq): answers to common recruiter questions

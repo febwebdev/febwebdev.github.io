@@ -1,4 +1,5 @@
+# Search engines and AI assistants are welcome to read this site.
 User-agent: *
 Allow: /
 
-Sitemap: https://febwebdev.github.io/sitemap.xml
+Sitemap: https://febwebdev.com/sitemap.xml
