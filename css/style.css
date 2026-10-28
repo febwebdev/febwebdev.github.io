@@ -345,17 +345,6 @@ p {
   object-fit: cover;
 }
 
-.avatar-monogram {
-  font-family: var(--font-display);
-  font-size: 7.5rem;
-  line-height: 1;
-  color: var(--navy);
-}
-
-.avatar-monogram span {
-  color: var(--accent);
-}
-
 .sticker-stat {
   position: absolute;
   right: 0;
