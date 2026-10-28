@@ -1,13 +1,13 @@
 # febwebdev
 
-> Portfolio of Febelyn, a dedicated, loyal remote WordPress developer with 10+ years of experience and 5+ years working remotely with agencies. Febelyn builds WordPress sites from approved Figma designs, fixes sites when they stop working, and looks after live sites. Open to a long-term remote WordPress role. Time zone: UTC+8.
+> Portfolio of Febelyn, a dedicated, loyal remote WordPress developer with 10+ years of experience and 5+ years working remotely with agencies. Febelyn builds WordPress websites from approved Figma designs, fixes websites when they stop working, and looks after live websites. Open to a long-term remote WordPress role. Time zone: UTC+8.
 
 ## What Febelyn does
 
 - Builds WordPress websites from Figma designs that look right on desktop, tablet and phone, and that clients can edit themselves (Gutenberg, Kadence, reusable patterns).
 - Sets up WordPress for editors: ACF fields, custom post types, taxonomies and PHP templates, so routine changes happen in WordPress, not in code.
-- Fixes problems on live sites: contact forms that don't deliver email, plugin conflicts, layout bugs, cross-browser issues.
-- Looks after live client sites: updates, layout fixes and checks before anything is handed back.
+- Fixes problems on live websites: contact forms that don't deliver email, plugin conflicts, layout bugs, cross-browser issues.
+- Looks after live client websites: updates, layout fixes and checks before anything is handed back.
 - Works in whatever page builder a team already uses: Elementor, Beaver Builder, Divi, Bricks, WPBakery, SiteOrigin, Avada.
 - Is learning to use AI tools where they save time, and still tests every page and form personally.
 
