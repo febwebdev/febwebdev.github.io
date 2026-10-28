@@ -4,40 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Febelyn | Front-End WordPress Developer | Figma to WordPress, Gutenberg &amp; ACF</title>
-  <meta name="description" content="Front-End WordPress Developer specializing in Figma-to-WordPress builds, Gutenberg, Kadence, ACF, responsive development, QA, and website maintenance.">
+  <title>Febelyn | WordPress Developer: builds, fixes and site care</title>
+  <meta name="description" content="WordPress developer with 10+ years of experience. I turn designs into sites clients can edit, fix what stops working, and keep live sites healthy.">
   <meta name="author" content="Febelyn">
 
-  <meta property="og:title" content="Febelyn | Front-End WordPress Developer">
-  <meta property="og:description" content="Figma-to-WordPress development, Gutenberg, Kadence, ACF, Beaver Builder, Page Builders, responsive builds, QA, and ongoing website support.">
+  <meta property="og:title" content="Febelyn | WordPress Developer">
+  <meta property="og:description" content="I build WordPress sites, and I fix them when they stop behaving. Figma to WordPress, Gutenberg, ACF, forms, WooCommerce and ongoing site care.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://febwebdev.github.io/">
   <meta property="og:image" content="https://febwebdev.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Febelyn, Front-End WordPress Developer">
+  <meta property="og:image:alt" content="Febelyn, WordPress Developer">
   <link rel="canonical" href="https://febwebdev.github.io/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111314" media="(prefers-color-scheme: dark)">
-
-  <script>
-    // Apply the saved or system theme before first paint to avoid a flash.
-    (function () {
-      var theme;
-      try { theme = localStorage.getItem("theme"); } catch (e) {}
-      if (theme !== "light" && theme !== "dark") {
-        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
-      document.documentElement.dataset.theme = theme;
-    })();
-  </script>
+  <meta name="theme-color" content="#f3f7fc">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
 
@@ -46,12 +33,9 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Febelyn",
-    "jobTitle": "Front-End WordPress Developer",
+    "jobTitle": "WordPress Developer",
     "url": "https://febwebdev.github.io/",
-    "email": "mailto:carino.febelyn@gmail.com",
-    "address": { "@type": "PostalAddress", "addressCountry": "PH" },
-    "sameAs": ["https://www.linkedin.com/in/febelyncarino/"],
-    "knowsAbout": ["WordPress", "Gutenberg", "Kadence", "Advanced Custom Fields", "Figma to WordPress", "HTML", "CSS", "JavaScript", "Responsive web design"]
+    "knowsAbout": ["WordPress", "Gutenberg", "Kadence", "Advanced Custom Fields", "Custom post types", "Gravity Forms", "WooCommerce", "Figma to WordPress", "HTML", "CSS", "JavaScript", "Cross-browser QA", "Website maintenance"]
   }
   </script>
 </head>
@@ -59,399 +43,241 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" data-header>
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Febelyn, home">
-        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
-        <span>Febelyn</span>
-      </a>
+      <a class="brand" href="#top" aria-label="febwebdev, home">feb<span>.</span></a>
 
-      <div class="header-actions">
-        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a class="nav-cta" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </nav>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <a href="#about">About</a>
+        <a href="#log">Work log</a>
+        <a href="#stack">Stack</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Say hi</a>
+      </nav>
 
-        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        </button>
-
-        <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-          <span class="sr-only">Toggle navigation</span>
-          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
-        </button>
-      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="status-pill"><span class="status-dot" aria-hidden="true"></span> Open to remote front-end roles · UTC+8</p>
-
-            <h1>I turn designs into <em>responsive, maintainable</em> <span class="marker">WordPress</span> websites.</h1>
-
-            <p class="hero-lede">
-              I'm Febelyn, a front-end WordPress developer. I build and improve WordPress sites with clean front-end code,
-              thoughtful responsive behavior, reusable content structures, and careful QA, from Figma handoff to launch
-              and ongoing maintenance.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
-              <a class="button button-secondary" href="#contact">Let's work together</a>
-            </div>
-          </div>
-
-          <div class="build-visual reveal" aria-hidden="true">
-            <div class="build-card">
-              <p class="build-card-label"><span>Figma frame</span><b>Design</b></p>
-              <div class="frame-sketch">
-                <i class="f-nav"></i>
-                <i class="f-title"></i>
-                <i class="f-img"></i>
-                <i class="f-text"></i>
-              </div>
-            </div>
-            <div class="build-card build-card-blocks">
-              <p class="build-card-label"><span>Gutenberg + ACF</span><b>Build</b></p>
-              <ul class="block-list">
-                <li>kadence/rowlayout</li>
-                <li>acf/project-grid</li>
-                <li>core/buttons</li>
-              </ul>
-            </div>
-            <div class="build-card build-card-qa">
-              <p class="build-card-label"><span>Pre-launch</span><b>QA</b></p>
-              <ul class="qa-list">
-                <li>Desktop, tablet, mobile</li>
-                <li>Cross-browser checks</li>
-                <li>Forms &amp; notifications</li>
-              </ul>
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="mono">WordPress developer · UTC+8</p>
+          <h1>Hello! I'm Febelyn. I build WordPress sites, and I <span class="hl">fix them</span> when they stop behaving.</h1>
+          <p class="hero-lede">For more than ten years I've helped agencies turn designs into sites that look right on every screen, are easy for clients to edit, and keep working long after launch.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#log">Read my work log</a>
+            <a class="button button-secondary" href="#about">Get to know me</a>
           </div>
         </div>
 
-        <ul class="stats reveal" aria-label="Experience at a glance">
-          <li><strong>100+</strong><span>WordPress sites delivered for agency clients worldwide</span></li>
-          <li><strong>10+</strong><span>years building and maintaining WordPress sites</span></li>
-          <li><strong>5+</strong><span>years working remotely with agencies</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="proof" aria-label="Client testimonial">
-      <div class="container">
-        <figure class="testimonial reveal">
-          <blockquote>
-            <p>
-              “Febelyn is an excellent developer and required very little oversight from our team.
-              Delivered work correctly on the first try.”
-            </p>
-          </blockquote>
-          <figcaption>
-            <span class="testimonial-rating" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
-            <span>Website rebrand client, 2022</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Selected work</p>
-            <h2>Practical WordPress work, not just pretty screens.</h2>
+        <div class="hero-art">
+          <div class="avatar-wrap">
+            <div class="avatar"><img src="images/avatar.webp" width="520" height="520" alt="Illustrated portrait of Febelyn"></div>
+            <p class="sticker-stat"><strong>100+</strong><span>sites shipped</span></p>
           </div>
-          <p>
-            Client names are intentionally omitted where appropriate. These examples focus on the problems solved,
-            my contribution, and the tools used.
-          </p>
-        </div>
 
-        <div class="projects-grid">
-
-          <!-- 1. Figma builds. To show a screenshot, replace the <ol class="process"> with:
-               <img src="images/work-figma-to-wordpress.webp" width="1400" height="875" alt="..." loading="lazy" decoding="async"> -->
-          <article class="project-card project-featured reveal">
-            <div class="project-art">
-              <ol class="process" aria-label="Build process">
-                <li>Approved Figma design</li>
-                <li>Global styles &amp; patterns</li>
-                <li>Gutenberg / Kadence build</li>
-                <li>Responsive QA &amp; launch</li>
-              </ol>
+          <div class="sticker-row">
+            <div class="status-card">
+              <div class="status-card-top"><span class="chip chip-fixed">Open</span><span class="mono">status</span></div>
+              <p>Looking for a long-term remote WordPress role</p>
             </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">01</span><span>Design → Development</span></div>
-              <h3>Agency website builds from Figma</h3>
-              <p>
-                Converted approved design files into responsive WordPress builds using Gutenberg and Kadence,
-                with reusable sections and structured content for easier client editing.
-              </p>
-              <ul>
-                <li>Responsive implementation across desktop, tablet, and mobile</li>
-                <li>Reusable Gutenberg/Kadence patterns and global styling</li>
-                <li>Content structures using ACF where needed</li>
-                <li>Cross-browser QA and pre-launch fixes</li>
-              </ul>
-
-              <ul class="tag-list" aria-label="Tools">
-                <li>Gutenberg</li><li>Kadence</li><li>ACF</li><li>PHP</li><li>CSS</li><li>JavaScript</li>
-              </ul>
-
-              <a class="text-link" href="case-studies/figma-to-wordpress/">
-                Read the case study <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 2. Villa booking -->
-          <article class="villa-book-card project-card reveal">
-            <div class="project-preview">
-              <img
-                src="images/work-villa-booking-full.webp"
-                width="717" height="910"
-                alt="Booking form with date picker on a villa website"
-                loading="lazy" decoding="async">
-            </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">02</span><span>Custom functionality</span></div>
-              <h3>Villa booking workflow</h3>
-              <p>
-                Built a custom booking experience around WordPress content, date availability, minimum-stay rules,
-                pricing logic, and form submission.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>Genesis</li><li>ACF</li><li>iCal sync (ICS)</li><li>Gravity Forms</li><li>Litepicker</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 3. Portfolio rebuild -->
-          <article class="project-card reveal">
-            <div class="project-preview">
-              <img
-                src="images/work-portfolio-rebuild.webp"
-                width="1202" height="946"
-                alt="Filterable project portfolio grid built with custom post types"
-                loading="lazy" decoding="async">
-            </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">03</span><span>Content architecture</span></div>
-              <h3>Portfolio content rebuild</h3>
-              <p>
-                Reworked an existing portfolio into structured WordPress content using custom post types,
-                taxonomies, and reusable display logic.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>ACF</li><li>CPT</li><li>Beaver Builder</li><li>Shortcodes</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">04</span><span>Troubleshooting</span></div>
-              <h3>Form delivery &amp; anti-spam troubleshooting</h3>
-              <p>
-                Investigated form-delivery issues by reviewing entries, notification logs, SMTP connectors,
-                and reCAPTCHA configuration rather than treating the form itself as the only possible failure point.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>Gravity Forms</li><li>SMTP</li><li>reCAPTCHA</li><li>QA</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-body">
-              <div class="project-meta"><span class="project-num">05</span><span>Ongoing support</span></div>
-              <h3>WordPress maintenance &amp; production fixes</h3>
-              <p>
-                Handled content updates, responsive fixes, plugin-related troubleshooting, forms, layout issues,
-                and QA across existing client websites.
-              </p>
-              <ul class="tag-list" aria-label="Tools">
-                <li>WordPress</li><li>CSS</li><li>Plugins</li><li>QA</li><li>Maintenance</li>
-              </ul>
-            </div>
-          </article>
-
+            <p class="learning-card"><strong>Currently learning: AI</strong>AI is here to stay. My job is to make sure what it helps build actually works for real people.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Skills &amp; tools</p>
-            <h2>A WordPress-focused front-end toolkit.</h2>
-          </div>
-          <p>
-            Comfortable joining an existing workflow, following established design systems, or building reusable
-            front-end patterns from scratch.
-          </p>
-        </div>
-
-        <div class="skills-grid reveal">
-          <div class="skill-group">
-            <h3>WordPress</h3>
-            <p>Theme customization and block-based builds, using child themes and established frameworks.</p>
-            <ul class="tag-list">
-              <li class="is-core">Gutenberg</li>
-              <li class="is-core">Kadence</li>
-              <li>Genesis</li>
-              <li>GeneratePress</li>
-              <li>Child Themes</li>
-              <li>Theme Customization</li>
-              <li>PHP</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Front-end</h3>
-            <p>Responsive interfaces and maintainable CSS.</p>
-            <ul class="tag-list">
-              <li>HTML</li>
-              <li class="is-core">CSS</li>
-              <li>JavaScript</li>
-              <li>jQuery</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Dynamic content</h3>
-            <p>Content structures that keep routine edits in WordPress instead of in code.</p>
-            <ul class="tag-list">
-              <li class="is-core">ACF / ACF Pro</li>
-              <li>CPT</li>
-              <li>Taxonomies</li>
-              <li>Shortcodes</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Forms &amp; integrations</h3>
-            <p>Form setup, notifications, anti-spam, and email-delivery troubleshooting, plus WooCommerce front-end work.</p>
-            <ul class="tag-list">
-              <li class="is-core">Gravity Forms</li>
-              <li>WooCommerce</li>
-              <li>reCAPTCHA</li>
-              <li>SMTP</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Workflow &amp; QA</h3>
-            <p>Responsive and cross-browser testing, staging review, performance checks, and careful handoff.</p>
-            <ul class="tag-list">
-              <li class="is-core">Figma</li>
-              <li>ClickUp</li>
-              <li>Asana</li>
-              <li>LambdaTest/BrowserStack</li>
-              <li>GTmetrix</li>
-              <li>Lighthouse</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Page builders</h3>
-            <p>Comfortable adapting to whichever one a project already uses.</p>
-            <ul class="tag-list">
-              <li>Elementor</li>
-              <li>Beaver Builder</li>
-              <li>Divi</li>
-              <li>WPBakery</li>
-              <li>SiteOrigin</li>
-              <li>Avada</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skills-legend">
-          <ul class="tag-list" aria-hidden="true"><li class="is-core">Highlighted</li></ul>
-          <span>Tools I use most</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
+    <section class="section section-white" id="about">
       <div class="container about-grid">
-        <div class="about-copy reveal">
-
-          <!-- Portrait: add images/febelyn.webp (square, at least 192 x 192) -->
-          <figure class="about-photo">
-            <img
-              src="images/febelyn.webp"
-              width="192" height="192"
-              alt="Portrait of Febelyn"
-              decoding="async"
-              onerror="this.parentElement.remove()">
-          </figure>
-
-          <p class="eyebrow">About</p>
-          <h2>I like the unglamorous work that keeps websites dependable.</h2>
-
-          <p>
-            I'm Febelyn, a front-end WordPress developer with 10+ years of experience building and maintaining websites
-            for agencies and clients. A large part of my work starts with a finished design and ends with a responsive,
-            editable WordPress site that keeps the details of that design intact.
-          </p>
-          <p>
-            That means debugging layout issues, tracing plugin conflicts, checking forms, testing responsive behavior,
-            and making sure a small production update doesn't break something elsewhere.
-          </p>
-          <p>
-            I work remotely and I'm comfortable in written communication: task comments, Slack, documentation,
-            and staging environments. I'm used to established agency workflows.
-          </p>
-
-          <div class="about-links">
-            <a class="button button-secondary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">View LinkedIn profile ↗</a>
-            <!-- <a class="button button-secondary" href="files/febelyn-resume.pdf">Download resume (PDF)</a> -->
+        <div class="about-copy">
+          <h2 class="section-title">A bit about me</h2>
+          <p>I like the quiet work that keeps websites dependable. Most of my projects start with a finished design and end with a WordPress site that keeps every detail of it, on desktop, tablet and phone.</p>
+          <p>When something breaks, I trace it to the real cause instead of patching around it. Clients tell me I need very little hand-holding: I write clear updates, flag problems early, and test properly before I call something done.</p>
+          <div class="about-numbers">
+            <p><strong>10+</strong><span>years in WordPress</span></p>
+            <p><strong>5+</strong><span>years remote with agencies</span></p>
           </div>
         </div>
 
-        <aside class="about-card reveal">
-          <p class="about-card-label">How I work</p>
-          <ol>
-            <li><span aria-hidden="true">01</span><div><strong>Understand the goal</strong><p>Review the design, requirements, existing stack, and editor workflow.</p></div></li>
-            <li><span aria-hidden="true">02</span><div><strong>Build for reuse</strong><p>Create responsive components and content structures that are easy to maintain.</p></div></li>
-            <li><span aria-hidden="true">03</span><div><strong>Test the details</strong><p>Check breakpoints, content edge cases, interactions, forms, and browser behavior.</p></div></li>
-            <li><span aria-hidden="true">04</span><div><strong>Communicate clearly</strong><p>Share concise updates, flag blockers early, and document anything the next person needs.</p></div></li>
-          </ol>
-        </aside>
+        <div class="about-side">
+          <p class="mono">Things I'm good at</p>
+          <ul class="pill-list">
+            <li class="pill-sun">Figma to WordPress</li>
+            <li>Gutenberg &amp; Kadence</li>
+            <li class="pill-blush">ACF &amp; custom post types</li>
+            <li>Responsive CSS</li>
+            <li>Gravity Forms</li>
+            <li class="pill-sun">WooCommerce</li>
+            <li class="pill-blush">Fixing tricky bugs</li>
+            <li>Cross-browser QA</li>
+            <li>Site maintenance</li>
+          </ul>
+          <figure class="quote">
+            <blockquote>“Required very little oversight from our team. Delivered work correctly on the first try.”</blockquote>
+            <figcaption>Website rebrand client, 2022 · <span class="stars" aria-label="5 out of 5 stars">★★★★★</span></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="section section-navy" id="log">
       <div class="container">
-        <div class="contact-card reveal">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Open to long-term front-end roles, WordPress or plain HTML/CSS/JS.</h2>
-            <p>I'm looking for a long-term, remote front-end role. WordPress is my specialty, and I'm comfortable working in plain HTML, CSS, and JavaScript. I also take on select projects and ongoing website support.</p>
+        <div class="section-head">
+          <h2 class="section-title">Work log</h2>
+          <p>Each project the way I think about it: what was wrong or needed, what I did, and how it turned out. Client names left out on purpose.</p>
+        </div>
+
+        <div class="log">
+          <article class="ticket">
+            <div class="ticket-body">
+              <p class="ticket-meta"><span class="chip chip-fixed">Fixed</span><span class="mono">Gravity Forms · SMTP · reCAPTCHA</span></p>
+              <h3>Contact form messages weren't reaching the client</h3>
+              <dl>
+                <dt>PROBLEM</dt><dd>Enquiries were submitted on the site but never arrived by email.</dd>
+                <dt>WHAT I DID</dt><dd>Checked form entries, notification logs, the SMTP connector and reCAPTCHA settings one by one instead of assuming the form was broken.</dd>
+                <dt>RESULT</dt><dd>Messages arriving again, with the real cause found.</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="ticket">
+            <div class="ticket-body">
+              <p class="ticket-meta"><span class="chip chip-shipped">Shipped</span><span class="mono">Genesis · ACF · iCal · Gravity Forms · Litepicker</span></p>
+              <h3>A villa needed bookings with live availability</h3>
+              <dl>
+                <dt>NEED</dt><dd>Guests should see open dates and a full price before they enquire.</dd>
+                <dt>WHAT I DID</dt><dd>Built a date picker fed by the villa's iCal calendar, with minimum-stay rules, pricing with taxes and fees, and a Gravity Forms enquiry.</dd>
+                <dt>RESULT</dt><dd>Guests pick real dates and see the total up front.</dd>
+              </dl>
+            </div>
+            <img class="ticket-shot" src="images/work-villa-booking-full.webp" width="717" height="910" loading="lazy" alt="Villa booking form with a date picker and price summary">
+          </article>
+
+          <article class="ticket">
+            <div class="ticket-body">
+              <p class="ticket-meta"><span class="chip chip-shipped">Shipped</span><span class="mono">ACF · Custom post types · Beaver Builder</span></p>
+              <h3>The client couldn't add projects without a developer</h3>
+              <dl>
+                <dt>PROBLEM</dt><dd>The portfolio was built by hand, so every new project meant editing code.</dd>
+                <dt>WHAT I DID</dt><dd>Moved it into custom post types and categories, with a filterable grid that builds itself.</dd>
+                <dt>RESULT</dt><dd>New projects are added from WordPress, with no code changes.</dd>
+              </dl>
+            </div>
+            <img class="ticket-shot" src="images/work-portfolio-rebuild.webp" width="1202" height="946" loading="lazy" alt="Filterable portfolio grid with category tabs">
+          </article>
+
+          <div class="mini-grid">
+            <article class="mini mini-sun">
+              <p><span class="chip chip-dark">Shipped</span></p>
+              <h3>Approved Figma designs, built to be edited</h3>
+              <p>Gutenberg and Kadence builds with reusable patterns, so pages stay on-design as clients add content.</p>
+              <a href="case-studies/figma-to-wordpress/">Read the case study →</a>
+            </article>
+            <article class="mini">
+              <p><span class="chip chip-demo">Demo</span></p>
+              <h3>Explain solar and battery in one picture</h3>
+              <p>An animated, keyboard-friendly explainer that walks through day, storage, night and EV charging.</p>
+              <a href="demos/ssc-energy-flow/">Try the demo →</a>
+            </article>
+            <article class="mini mini-blush">
+              <p><span class="chip chip-dark">Ongoing</span></p>
+              <h3>Keep live client sites healthy</h3>
+              <p>Updates, layout fixes and plugin conflicts across client sites, double-checked before I hand anything back.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container tool-wrap">
+        <div class="tool-intro">
+          <h2 class="section-title">My toolbox</h2>
+          <p>Strongest on the front end, comfortable across the WordPress side, and happy to work in whatever builder a team already uses.</p>
+        </div>
+        <div class="tool-grid">
+          <div><span class="mono">BUILD</span>Gutenberg, Kadence, Genesis, GeneratePress, child themes, HTML, CSS/SCSS, JavaScript</div>
+          <div><span class="mono">CONTENT</span>ACF Pro, custom post types, taxonomies, PHP templates, shortcodes</div>
+          <div><span class="mono">FORMS &amp; STORES</span>Gravity Forms, WooCommerce, SMTP, reCAPTCHA</div>
+          <div><span class="mono">BUILDERS</span>Elementor, Beaver Builder, Divi, Bricks, WPBakery, SiteOrigin, Avada</div>
+          <div><span class="mono">QA</span>Chrome DevTools, BrowserStack, LambdaTest, Lighthouse, GTmetrix</div>
+          <div><span class="mono">TEAMWORK</span>Figma, ClickUp, Asana, Slack, written handoff notes</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="faq">
+      <div class="container faq">
+        <h2 class="section-title">Questions recruiters ask me</h2>
+        <details open>
+          <summary>Do you only do the front end?</summary>
+          <p>Front-end is my strength, but I handle the whole WordPress side too: content structure with ACF and custom post types, forms and email delivery, WooCommerce, and keeping live sites running.</p>
+        </details>
+        <details>
+          <summary>Which time zone are you in?</summary>
+          <p>UTC+8. I've worked asynchronously with agencies in other time zones for over five years, using task comments, Slack and clear handoff notes.</p>
+        </details>
+        <details>
+          <summary>Can you work with our page builder?</summary>
+          <p>Most likely. I've worked in Elementor, Beaver Builder, Divi, Bricks, WPBakery, SiteOrigin and Avada, and I adapt to whatever a project already uses.</p>
+        </details>
+        <details>
+          <summary>When can you start?</summary>
+          <p>Right away. I usually reply within one business day.</p>
+        </details>
+        <details>
+          <summary>What kind of role are you looking for?</summary>
+          <p>A long-term, remote position on a team that builds or looks after WordPress sites. I'm also comfortable in plain HTML, CSS and JavaScript, and I take on select projects and ongoing site care.</p>
+        </details>
+        <details>
+          <summary>Do you work on existing sites, or only new builds?</summary>
+          <p>Both. A lot of my work is on live sites: layout fixes, plugin conflicts, form problems and content updates, alongside new builds from Figma.</p>
+        </details>
+        <details>
+          <summary>Will our clients be able to edit the site themselves?</summary>
+          <p>Yes, that's one of my main goals. I build with reusable blocks and patterns, and use ACF fields and custom post types so routine changes happen in WordPress, not in code.</p>
+        </details>
+        <details>
+          <summary>How do you make sure nothing breaks?</summary>
+          <p>I check every page at desktop, tablet and phone sizes, test in the main browsers (with BrowserStack or LambdaTest), and send test entries through every form before I call a job done. After a change, I look over the rest of the site too, so a small fix doesn't break something somewhere else.</p>
+        </details>
+        <details>
+          <summary>How do you keep the team updated?</summary>
+          <p>In writing, so nobody has to wait for a meeting: short updates in task comments, Slack, ClickUp or Asana, blockers flagged early, and notes the next person can follow.</p>
+        </details>
+        <details>
+          <summary>Do you use AI tools?</summary>
+          <p>I'm learning to bring them into my work. AI is here to stay, and it can speed up the routine parts. My job is to make sure what it helps build is correct, works on every screen and in every browser, and is easy for clients to edit.</p>
+        </details>
+        <details>
+          <summary>Why are client names missing from your work?</summary>
+          <p>Most of my work was for agencies, so I leave client names out on purpose. I'm happy to walk you through any project in more detail.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <h2>Hiring, or need a hand with a site?</h2>
+            <p>Send me a few lines about the role or the project. I'll reply within one business day.</p>
           </div>
 
-          <div class="contact-actions">
-            <a class="button button-primary" href="https://www.linkedin.com/in/febelyncarino/" target="_blank" rel="noopener">Message me on LinkedIn</a>
-            <a class="button button-secondary" href="mailto:carino.febelyn@gmail.com">Send an email</a>
-          </div>
-
-          <p class="contact-note">
-            <a class="contact-email" href="mailto:carino.febelyn@gmail.com">carino.febelyn@gmail.com</a>
-            <button class="copy-chip button button-secondary" type="button" data-copy-email data-email="carino.febelyn@gmail.com">Copy email</button>
-          </p>
-          <p class="contact-note">Based in the Philippines (UTC+8). Available for remote work immediately. I usually reply within one business day.</p>
+          <form class="contact-form" data-gform action="https://docs.google.com/forms/d/e/1FAIpQLSewdlSXfePcTXCyvjo8lmxLjloxr3YUCMmWLy6CTl_O12pB1w/formResponse" method="POST">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="entry.243168741" type="text" placeholder="e.g. WordPress developer role" required>
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" name="entry.285307782" type="email" autocomplete="email" placeholder="name@example.com" required>
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="entry.1475070010" rows="4" placeholder="What you need help with, and your timeline" required></textarea>
+            <button class="button button-dark" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -459,11 +285,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-year></span> Febelyn. Hand-built with HTML, CSS &amp; JavaScript.</p>
+      <p>© <span data-year>2026</span> febwebdev</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>

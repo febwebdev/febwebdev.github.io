@@ -1,6 +1,6 @@
 # febwebdev.github.io
 
-Personal portfolio website for **Febelyn — Front-End WordPress Developer**.
+Personal portfolio website for **Febelyn, WordPress Developer**.
 
 🌐 **Live site:** [febwebdev.github.io](https://febwebdev.github.io/)
 
@@ -158,7 +158,7 @@ https://febwebdev.github.io/
 
 ## Contact
 
-Visit the portfolio for contact information or connect with me on [LinkedIn](https://www.linkedin.com/in/febelyncarino/).
+Use the contact form on the [portfolio](https://febwebdev.github.io/#contact) to get in touch.
 
 ---
 
