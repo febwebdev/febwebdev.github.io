@@ -34,8 +34,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=3">
-  <script defer src="js/main.js?v=3"></script>
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <script defer src="js/main.js?v=4"></script>
 
   <script type="application/ld+json">
 {
@@ -435,13 +435,17 @@
             <p>Say hello! Send me a few lines about the role or the project. I'll reply within one business day.</p>
           </div>
 
-          <form class="contact-form" data-gform action="https://docs.google.com/forms/d/e/1FAIpQLSewdlSXfePcTXCyvjo8lmxLjloxr3YUCMmWLy6CTl_O12pB1w/formResponse" method="POST">
+          <form class="contact-form" data-gform novalidate>
             <label for="cf-subject">Subject</label>
             <input id="cf-subject" name="entry.243168741" type="text" placeholder="e.g. WordPress developer role" required>
             <label for="cf-email">Your email</label>
             <input id="cf-email" name="entry.285307782" type="email" autocomplete="email" placeholder="name@example.com" required>
             <label for="cf-message">Message</label>
             <textarea id="cf-message" name="entry.1475070010" rows="4" placeholder="What you need help with, and your timeline" required></textarea>
+            <div class="form-trap" aria-hidden="true">
+              <label for="cf-website">Leave this field empty</label>
+              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <button class="button button-dark" type="submit">Send message</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
