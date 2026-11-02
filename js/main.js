@@ -46,19 +46,45 @@ if (navToggle && nav) {
 
 // Contact form: posts to Google Forms in the background, so replies land in
 // the linked Google Sheet without showing an email address on the site.
+// The endpoint lives here rather than in the HTML so bots that scrape form
+// actions can't find it, and two quiet checks drop automated submissions.
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSewdlSXfePcTXCyvjo8lmxLjloxr3YUCMmWLy6CTl_O12pB1w/formResponse";
+const MIN_FILL_MS = 3000;
+const THANKS = "Thanks! Your message is on its way. I'll reply within one business day.";
+
 document.querySelectorAll("[data-gform]").forEach((form) => {
   const status = form.querySelector(".form-status");
   const button = form.querySelector("button[type='submit']");
+  const trap = form.querySelector(".form-trap input");
+  const openedAt = Date.now();
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // A filled-in hidden field or an instant submit means a bot: pretend it
+    // worked so it doesn't retry, but send nothing.
+    if ((trap && trap.value) || Date.now() - openedAt < MIN_FILL_MS) {
+      form.reset();
+      status.textContent = THANKS;
+      return;
+    }
+
+    const data = new FormData(form);
+    data.delete("website");
+
     button.disabled = true;
     status.textContent = "Sending…";
 
     try {
-      await fetch(form.action, { method: "POST", mode: "no-cors", body: new FormData(form) });
+      await fetch(GOOGLE_FORM_URL, { method: "POST", mode: "no-cors", body: data });
       form.reset();
-      status.textContent = "Thanks! Your message is on its way. I'll reply within one business day.";
+      status.textContent = THANKS;
     } catch {
       status.textContent = "Something went wrong. Please try again in a moment.";
     } finally {

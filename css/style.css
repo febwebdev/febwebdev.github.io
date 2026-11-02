@@ -857,6 +857,15 @@ p {
   transform: none;
 }
 
+/* Spam trap: hidden from people, visible to bots that fill every field */
+.form-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-status {
   min-height: 1.6em;
   font-weight: 600;
