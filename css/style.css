@@ -450,6 +450,17 @@ p {
   color: var(--on-navy);
 }
 
+/* The red focus ring is too faint on navy, so use yellow there,
+   and navy on the light cards inside this section. */
+.section-navy :focus-visible {
+  outline-color: var(--sun);
+}
+
+.section-navy .mini-sun :focus-visible,
+.section-navy .mini-blush :focus-visible {
+  outline-color: var(--navy);
+}
+
 .section-title {
   font-size: clamp(2rem, 3.6vw, 2.8rem);
 }
@@ -829,7 +840,7 @@ p {
   width: 100%;
   min-height: 48px;
   padding: 0 16px;
-  border: 2px solid transparent;
+  border: 2px solid var(--ink-soft);
   border-radius: 14px;
   background: var(--white);
   color: var(--navy);
@@ -841,9 +852,10 @@ p {
   resize: vertical;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
   border-color: var(--navy);
 }
 

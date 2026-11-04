@@ -15,7 +15,7 @@
 *{box-sizing:border-box}
 body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
 .ssc{max-width:860px;margin:0 auto}
-.ssc h2{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
+.ssc h1{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
 .ssc .lead{margin:0 0 1.2rem;color:var(--muted);max-width:60ch}
 .scene{--scene-bg:var(--day);background:var(--scene-bg);color:var(--ink);border-radius:18px;transition:background-color .6s,color .6s;overflow:hidden}
 .scene[data-stage="3"],.scene[data-stage="4"]{--scene-bg:var(--night);color:#e8f1f6}
@@ -36,12 +36,12 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
 .scene[data-stage="2"] .b3{opacity:1}
 .scene[data-stage="4"] .b2,.scene[data-stage="4"] .b3{opacity:0}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
-.tab{font:inherit;font-weight:600;padding:14px 10px;border:2px solid #c5d6d8;border-radius:12px;background:#fff;color:var(--ink);cursor:pointer;min-height:52px;transition:background-color .25s,border-color .25s,color .25s}
+.tab{font:inherit;font-weight:600;padding:14px 10px;border:2px solid #6f8f93;border-radius:12px;background:#fff;color:var(--ink);cursor:pointer;min-height:52px;transition:background-color .25s,border-color .25s,color .25s}
 .tab:hover{border-color:var(--green)}
 .tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.tab:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .pane{padding:4px 2px;max-width:62ch}
-.pane h3{margin:.2em 0 .3em;font-size:1.25rem}
+.pane h2{margin:.2em 0 .3em;font-size:1.25rem}
 .pane p{margin:0}
 .pane:not([hidden]){animation:fade .4s ease}
 @keyframes fade{from{opacity:0}to{opacity:1}}
@@ -52,6 +52,7 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
  *{transition:none!important}
  .flow.on{animation:none;stroke-dasharray:none}
  .pane:not([hidden]){animation:none}
+ .motion-toggle{display:none}
 }
 .demo-label{
   margin:0 0 .5rem;
@@ -59,8 +60,12 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
   font-weight:700;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--green);
+  color:#0f7a4f;
 }
+.scene.paused .flow.on{animation-play-state:paused}
+.motion-toggle{font:inherit;font-size:.95rem;font-weight:600;margin:0 0 14px;padding:10px 16px;min-height:44px;border:2px solid #6f8f93;border-radius:12px;background:#fff;color:var(--ink);cursor:pointer}
+.motion-toggle:hover{border-color:var(--green)}
+.motion-toggle:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .back-link{margin:0 0 1.25rem;font-size:.95rem}
 .back-link a{color:var(--ink);font-weight:600}
 .about-demo{margin:2rem 0 0;padding-top:1rem;border-top:1px solid rgba(15,43,46,.15);color:var(--muted);font-size:.95rem;max-width:60ch}
@@ -69,11 +74,11 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
 
 <body>
 
-<section class="ssc" aria-labelledby="ssc-title">
+<main class="ssc" aria-labelledby="ssc-title">
 
  <p class="back-link"><a href="../../#log">&larr; Back to homepage</a></p>
  <p class="demo-label">Interactive animated explainer</p>
-	<h2 id="ssc-title">Your home, powered around the clock</h2>
+ <h1 id="ssc-title">Your home, powered around the clock</h1>
 
  <p class="lead">
   See how solar panels, a home battery and an electric car share energy through the day and night. Choose a stage below, or use the arrow keys.
@@ -163,25 +168,27 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
 
  </div>
 
+ <button class="motion-toggle" type="button" data-motion-toggle>Pause animation</button>
+
  <div aria-live="polite">
 
   <div class="pane">
-   <h3>Solar generates your power by day</h3>
+   <h2>Solar generates your power by day</h2>
    <p>While the sun is up, the panels power your home first, so you buy less electricity from the grid.</p>
   </div>
 
   <div class="pane" hidden>
-   <h3>Extra energy goes into the battery</h3>
+   <h2>Extra energy goes into the battery</h2>
    <p>Whatever the home doesn't use right away is stored in the battery instead of going to waste.</p>
   </div>
 
   <div class="pane" hidden>
-   <h3>The battery takes over after dark</h3>
+   <h2>The battery takes over after dark</h2>
    <p>In the evening, the stored solar energy keeps the lights and appliances running.</p>
   </div>
 
   <div class="pane" hidden>
-   <h3>Charge your car from your own roof</h3>
+   <h2>Charge your car from your own roof</h2>
    <p>Plug in the car and charge it with sunshine from your roof, saved in the battery.</p>
   </div>
 
@@ -189,7 +196,7 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
 
 
  <p class="about-demo">About this demo: a custom, keyboard-accessible animation built with SVG and JavaScript, with no plugins. The same approach can explain any product or process, and it can be added to a WordPress website as a block.</p>
-</section>
+</main>
 
 <script>
 (function(){
@@ -250,6 +257,15 @@ body{margin:0;padding:24px 16px;font-family:"Avenir Next","Segoe UI",system-ui,s
   });
 
  });
+ var motion=document.querySelector('[data-motion-toggle]');
+ if(motion){
+  motion.addEventListener('click',function(){
+   var paused=!scene.classList.contains('paused');
+   scene.classList.toggle('paused',paused);
+   motion.textContent=paused?'Play animation':'Pause animation';
+  });
+ }
+
  go(1);
 })();
 </script>
