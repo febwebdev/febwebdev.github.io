@@ -17,7 +17,7 @@
 - Shipped: villa bookings with live availability. A date picker fed by an iCal calendar, minimum-stay rules, pricing with taxes and fees, and a Gravity Forms enquiry.
 - Shipped: a portfolio the client can update without a developer. Moved hand-built pages into custom post types with a filterable grid.
 - Shipped: approved Figma designs built in Gutenberg and Kadence with reusable patterns.
-- Demo: an animated, keyboard-friendly solar and battery explainer: https://febwebdev.com/demos/solar-energy-flow/
+- Demo: an interactive animated explainer, a custom keyboard-accessible SVG and JavaScript animation (shown explaining solar and battery power) of the kind that can be added to a WordPress website as a block: https://febwebdev.com/demos/solar-energy-flow/
 
 ## Toolbox
 
