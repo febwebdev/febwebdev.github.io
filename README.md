@@ -55,7 +55,6 @@ Ongoing work involving responsive fixes, layout issues, content updates, forms, 
 - Elementor
 - Beaver Builder
 - Divi
-- Bricks
 - WPBakery
 - SiteOrigin
 - Avada

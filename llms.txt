@@ -8,7 +8,7 @@
 - Sets up WordPress for editors: ACF fields, custom post types, taxonomies and PHP templates, so routine changes happen in WordPress, not in code.
 - Fixes problems on live websites: contact forms that don't deliver email, plugin conflicts, layout bugs, cross-browser issues.
 - Looks after live client websites: updates, layout fixes and checks before anything is handed back.
-- Works in whatever page builder a team already uses: Elementor, Beaver Builder, Divi, Bricks, WPBakery, SiteOrigin, Avada.
+- Works in whatever page builder a team already uses: Elementor, Beaver Builder, Divi, WPBakery, SiteOrigin, Avada.
 - Is learning to use AI tools where they save time, and still tests every page and form personally.
 
 ## Selected work
